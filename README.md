@@ -49,26 +49,33 @@ Answer: SELECT * FROM Expenses WHERE date >= '2021-01-01' AND date <= '2024-12-1
 
 **2.1 Filtering by Category:** 
 Write a query to find all expenses belonging to a specific category (e.g., "Entertainment").
+Answer: SELECT * FROM Expenses WHERE category LIKE '%Entertainment%';
 
 **2.2 Filtering with Comparison Operators:** 
 Find expenses with an amount greater than a certain value (e.g., $50).
+Answer: SELECT * FROM Expenses WHERE amount > 50;
 
 **2.3 Combining Filters (AND):**  
 Refine your query to find expenses that meet multiple criteria. For example, you might search for expenses greater than $75 AND belonging to the "Food" category.
+Answer: SELECT * FROM Expenses WHERE amount > 75 AND category LIKE '%Food%';
 
 **2.4 Combining Filters (OR):** 
 Modify your query to find expenses belonging to one category or another (e.g., "Transportation" OR "Groceries").
+Answer: SELECT * FROM Expenses WHERE category LIKE '%Transportation' OR category LIKE '%Groceries%';
 
 **2.5 Filtering with NOT:** 
 Write a query to display expenses unrelated to a specific category (e.g., "Rent").
+Answer: SELECT * FROM Expenses WHERE category NOT LIKE '%Rent%';
 
 ## Part 3: Sorting Retrieved Data (45 minutes)
 
 **3.1 Sorting by Amount:** 
 Write a query to display all expenses sorted by amount in a specific order (e.g., descending order for highest to lowest spending).
+Answer: SELECT * FROM Expenses ORDER BY amount DESC;
 
 **3.2 Sorting by Date and Category:**  
 Modify your query to sort expenses based on multiple columns. For example, you might sort first by date (descending order) and then by category (ascending order) to see recent spending trends by category.
+Answer: SELECT * FROM Expenses ORDER BY date DESC, category ASC;
 
 ## Part 4: Database Upgrade
 
