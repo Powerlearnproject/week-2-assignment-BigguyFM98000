@@ -92,16 +92,24 @@ amount (DECIMAL(10,2)) - NOT NULL
 date (DATE) - NOT NULL
 
 source (VARCHAR(50)) - NOT NULL
+Answer: CREATE TABLE IF NOT EXISTS Income(
+income_id INT PRIMARY KEY AUTO-INCREMENT,
+amount DECIMAL(10,2) NOT NULL,
+date DATE NOT NULL
+);
 
 **4.2 After creating the "Income" table, you realize you also want to track the income category "source" (e.g., "Salary," "Freelance Work").** 
 
 * Use ALTER TABLE to add a new column named "category" of type VARCHAR(50).
+Answer: ALTER TABLE Income ADD source VARCHAR(50);
   
 **4.3 Let's say you decide tracking the income source isn't necessary for now.**
 
 * Use ALTER TABLE again to remove the "source" column from the "Income" table.
+Answer: ALTER TABLE Income DROP COLUMN source;
 
 Imagine you no longer need the "Income" table entirely. Experiment how to Use DROP TABLE to permanently remove it from your database.
+Answer: DROP TABLE Income;
 
 Ensure to save all your queries in a document and upload onto this repo. 
 
