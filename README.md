@@ -33,14 +33,17 @@ Based on the Expense Tracker table you designed in Week 1, which likely includes
 **1.1 Retrieving All Expenses:**
 
 Write an SQL query to retrieve all data points (columns) from the "Expenses" table.
+Answer: SELECT * FROM Expenses;
 
 **1.2 Specific Columns:** 
 
 Modify your query to select only specific columns relevant to your analysis. For example, you might choose "date," "category," and "amount" to analyze spending patterns by category and date.
+Answer: SELECT date,category,amount FROM Expenses;
 
 **1.3 Filtering by Date Range:** 
 Write a query to retrieve expenses charged between a specific date range (e.g., January 1, 2021, to December 15, 2024).
 Remember to use the appropriate data type for the "date" column when specifying the date range in your query.
+Answer: SELECT * FROM Expenses WHERE date >= '2021-01-01' AND date <= '2024-12-15';
 
 ## Part 2: Filtering with WHERE Clause (45 minutes)
 
